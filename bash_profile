@@ -4,6 +4,8 @@
 export PATH=/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games
 
 # Setting Default Colors
+# <Color> = <Color>
+# B<Color> = Bold text in <Color>
 
 export RED='\[\e[0;31m\]'
 export GREEN='\[\e[0;32m\]'
@@ -45,6 +47,7 @@ alias ll='ls -lAh'
 alias mv='mv -i'
 alias rm='rm -i'
 alias free='free -h'
+alias grep='grep --color=auto'
 
 
 if [[ -x "$(/usr/bin/which colordiff 2>/dev/null)" ]]; then
