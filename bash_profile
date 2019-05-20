@@ -73,5 +73,8 @@ alias stare='echo '\''(•_•)'\'''
 alias sunglasses='echo '\''(■_■¬)'\'''
 alias woohoo='echo \\\(ˆ˚ˆ\)/'
 
+# Append to the history file, don't overwrite it
+shopt -s histappend
 
-
+# Save multiple-line commands in the same history entry (Usually is enabled by default)
+shopt -s cmdhist
