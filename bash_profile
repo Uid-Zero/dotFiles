@@ -48,8 +48,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias free='free -h'
 alias grep='grep --color=auto'
-alias :wq!='echo"You are not in Vim. Dumbass"'
+alias :wq!='echo "You are not in Vim. Dumbass"'
 alias please="sudo"
+alias cmatrix='cmatrix -s'
 
 if [[ -x "$(/usr/bin/which colordiff 2>/dev/null)" ]]; then
   alias diff='colordiff'
