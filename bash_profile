@@ -88,16 +88,19 @@ alias stare='echo '\''(•_•)'\'''
 alias sunglasses='echo '\''(■_■¬)'\'''
 alias woohoo='echo \\\(ˆ˚ˆ\)/'
 
+# Push your git changes from master to all the branches
+alias push_All='for branch_Name in $(git branch --format "%(refname:short)");do git checkout $branch_Name && git merge master && git push && git checkout master; done'
+
 # Append to the history file, don't overwrite it
 shopt -s histappend
 
 # Save multiple-line commands in the same history entry (Usually is enabled by default)
 shopt -s cmdhist
 
-# VPN with openvpn.? 
-# Point the [--config] to your .ovpn file and [--auth-user-pass] to your credentials. 
+# VPN with openvpn.?
+# Point the [--config] to your .ovpn file and [--auth-user-pass] to your credentials.
 
-## Sample credentials file. 
+## Sample credentials file.
 
 ## cat /home/$USER/Documents/.eLanVPN/credentials
 ## UserName
