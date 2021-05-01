@@ -1,7 +1,20 @@
 # ~/.bash_profile
 
 # Default PATH
+
 export PATH=/usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/sbin:/bin:/usr/games
+
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Run a Global Config if exists
+
+if [ -f /etc/bash_profile ]; then
+       . /etc/bash_profile
+fi
 
 # Setting Default Colors
 # <Color> = <Color>
@@ -80,3 +93,14 @@ shopt -s histappend
 
 # Save multiple-line commands in the same history entry (Usually is enabled by default)
 shopt -s cmdhist
+
+# VPN with openvpn.? 
+# Point the [--config] to your .ovpn file and [--auth-user-pass] to your credentials. 
+
+## Sample credentials file. 
+
+## cat /home/$USER/Documents/.eLanVPN/credentials
+## UserName
+## Password
+
+alias eLan="sudo openvpn --config /etc/openvpn/client.ovpn --auth-user-pass /home/$USER/Documents/.eLanVPN/credentials --daemon"

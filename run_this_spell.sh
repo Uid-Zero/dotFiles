@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make this file executable.
-# chmod 754 run_this_spell.sh
+chmod 754 run_this_spell.sh
 
 # Force link BashRC and Bash_Profile files to the files with same name in Home directory.
 

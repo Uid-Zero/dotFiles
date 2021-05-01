@@ -1,9 +1,15 @@
 # ~/.bashrc
 
-# All the stuff is in ~/.bash_profile
+# Most of the stuff is going to be in ~/.bash_profile
 
 if [[ -r ${HOME}/.bash_profile ]]; then
   . ${HOME}/.bash_profile
+fi
+
+# Run a Global Config if exists
+
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
 fi
 
 GOPATH=$HOME/go
