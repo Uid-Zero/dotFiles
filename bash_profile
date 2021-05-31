@@ -64,7 +64,7 @@ alias grep='grep --color=auto'
 alias :wq!='echo "You are not in Vim. Dumbass"'
 alias please="sudo"
 alias cmatrix='cmatrix -s'
-alias doas='/usr/bin/sudo -u root /usr/local/bin/sudosh'
+alias ap='ansible-playbook'
 
 if [[ -x "$(/usr/bin/which colordiff 2>/dev/null)" ]]; then
   alias diff='colordiff'
