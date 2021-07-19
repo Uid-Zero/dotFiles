@@ -65,6 +65,7 @@ alias :wq!='echo "You are not in Vim. Dumbass"'
 alias please="sudo"
 alias cmatrix='cmatrix -s'
 alias ap='ansible-playbook'
+alias tf='terraform'
 
 if [[ -x "$(/usr/bin/which colordiff 2>/dev/null)" ]]; then
   alias diff='colordiff'
