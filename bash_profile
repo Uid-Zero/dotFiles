@@ -66,6 +66,7 @@ alias please="sudo"
 alias cmatrix='cmatrix -s'
 alias ap='ansible-playbook'
 alias tf='terraform'
+alias k='kubectl'
 
 if [[ -x "$(/usr/bin/which colordiff 2>/dev/null)" ]]; then
   alias diff='colordiff'
