@@ -1,0 +1,3 @@
+dotfiles_repo: "{{ playbook_dir }}/../../bash"
+backup_dir: "{{ dotfiles_repo }}/backup"
+dotfiles_list: [] 

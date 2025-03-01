@@ -6,12 +6,6 @@ if [[ -r ${HOME}/.bash_profile ]]; then
   . ${HOME}/.bash_profile
 fi
 
-# Run a Global Config if exists
-
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
 GOPATH=$HOME/go
 function _update_ps1() {
 	    PS1="$($GOPATH/bin/powerline-go -error $?)"

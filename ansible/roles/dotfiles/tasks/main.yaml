@@ -1,0 +1,29 @@
+- name: Ensure backup directory exists
+  file:
+    path: "{{ backup_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Find all files in the bash directory
+  find:
+    paths: "{{ dotfiles_repo }}"
+    file_type: file
+  register: found_dotfiles
+
+- name: Store found dotfiles in a variable
+  set_fact:
+    dotfiles_list: "{{ found_dotfiles.files | map(attribute='path') | map('basename') | list }}"
+
+- name: Backup existing dotfiles if present
+  command:
+    cmd: mv "{{ ansible_env.HOME }}/.{{ item }}" "{{ backup_dir }}/{{ item }}.bak"
+  args:
+    removes: "{{ ansible_env.HOME }}/.{{ item }}"
+  loop: "{{ dotfiles_list }}"
+
+- name: Create symlinks for bash dotfiles
+  file:
+    src: "{{ dotfiles_repo }}/{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.{{ item }}"
+    state: link
+  loop: "{{ dotfiles_list }}"

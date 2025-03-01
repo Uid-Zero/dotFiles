@@ -1,0 +1,6 @@
+---
+- name: Setup Dotfiles
+  hosts: localhost
+  become: false
+  roles:
+    - role: "{{ playbook_dir }}/../roles/dotfiles"

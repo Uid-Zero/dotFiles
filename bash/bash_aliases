@@ -1,0 +1,105 @@
+# Aliases
+
+if [[ -x "$(/usr/bin/which netstat 2>/dev/null)" ]]; then
+    alias listening='netstat -launt | grep LISTEN --color=auto'
+else
+    alias listening='ss -tuna'
+fi
+
+# System Info
+alias meminfo="awk '{printf \"%-25s %8.2f MB\\n\", \$1, \$2/1024}' /proc/meminfo"
+alias cpuinfo='lscpu'
+alias diskusage='du -h --max-depth=1'
+alias ports='ss -tulnp' 
+alias top='htop' 
+alias df='df -h -xtmpfs -xdevtmpfs'
+alias ls='ls -F --color=auto'
+alias ll='ls -lAh'
+alias tree='tree -N'
+alias diff='colordiff'
+alias bc='bc -ql'
+alias cal='cal -m'
+alias free='free -h'
+alias grep='grep --color=auto'
+
+# Git Shortcuts
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+alias gco='git checkout'
+alias gd='git diff'
+alias gl='git log --oneline --graph --decorate --all'
+alias gcl='git clone'
+
+# Kubernetes
+alias kc='kubectl'
+alias kgp='kubectl get pods'
+alias kgd='kubectl get deployments'
+alias kgn='kubectl get nodes'
+alias kctx='kubectl config use-context'
+
+# Terraform
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tfp='terraform plan'
+alias tfv='terraform validate'
+alias tfd='terraform destroy'
+alias tfi='terraform init'
+
+# Networking
+alias myip='curl ifconfig.me'
+alias flushdns='sudo systemd-resolve --flush-caches'
+alias nslookup='dig +short'
+alias pingg='ping google.com -c 5'
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+
+# Fun Aliases
+alias please='sudo'
+alias weather='curl wttr.in'
+alias :q='echo "Not in Vim, buddy!"'
+alias :wq!='echo "You are not in Vim. Dumbass"'
+
+# Safety Aliases
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Docker
+alias d='docker'
+alias dps='docker ps'
+alias di='docker images'
+alias drm='docker rm $(docker ps -aq)'
+alias dstop='docker stop $(docker ps -q)'
+alias dexec='docker exec -it'
+alias dlogs='docker logs -f'
+alias dc='docker-compose'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+
+# Kaomoji 
+alias disapprove='echo '\''ಠ_ಠ'\'''
+alias kilroy='echo '\''ฅ^•ﻌ•^ฅ'\'''
+alias rage='echo '\''(╯°□°）╯︵ ┻━┻'\'''
+alias shrug='echo '\''¯\_(ツ)_/¯'\'''
+alias stare='echo '\''(•_•)'\'''
+alias sunglasses='echo '\''(■_■¬)'\'''
+alias woohoo='echo \\\(ˆ˚ˆ\)/'
+alias lenny='echo "( ͡° ͜ʖ ͡°)"'
+alias happy='echo '\''(＾◡＾)'\'''
+alias sad='echo '\''(︶︹︺)'\'''
+alias confused='echo '\''(⊙_☉)'\'''
+alias excited='echo '\''＼(≧▽≦)／'\'''
+alias angry='echo '\''(ノಠ益ಠ)ノ'\'''
+alias thinking='echo '\''(¬‿¬)'\'''
+alias sleepy='echo '\''(-_-) Zzz'\'''
+alias thumbs_up='echo '\''(👍≖‿‿≖)👍'\'''
+alias thumbs_down='echo '\''(👎≖_≖)👎'\'''
+alias flex='echo '\''ᕙ(⇀‸↼‶)ᕗ'\'''
+alias fight_me='echo '\''ლ(ಠ益ಠლ)'\'''
+alias hug='echo '\''(づ｡◕‿‿◕｡)づ'\'''
+alias party='echo '\''(〜￣▽￣)〜'\'''
+alias success='echo '\''(ง •̀_•́)ง'\'''
+alias scared='echo '\''(๑•﹏•)'\'''
+alias kiss='echo '\''(╯3╰)'\'''
