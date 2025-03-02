@@ -3,4 +3,4 @@
   hosts: localhost
   become: false
   roles:
-    - role: "{{ playbook_dir }}/../roles/dotfiles"
+    - role: "{{ playbook_dir }}/../roles/dotFiles"
