@@ -32,6 +32,7 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gl='git log --oneline --graph --decorate --all'
 alias gcl='git clone'
+alias gb='git branch'
 
 # Kubernetes
 alias kc='kubectl'
