@@ -58,7 +58,6 @@ alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 # Fun Aliases
 alias please='sudo'
-alias weather='curl wttr.in'
 alias :q='echo "Not in Vim, buddy!"'
 alias :wq!='echo "You are not in Vim. Dumbass"'
 
