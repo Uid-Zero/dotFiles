@@ -65,3 +65,26 @@ youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-r
 
 ! Disable video preview
 www.youtube.com##.ytp-inline-preview-ui
+
+! Drik panchang
+
+www.drikpanchang.com##.dpFooter
+www.drikpanchang.com##.dpFBComments
+www.drikpanchang.com##.dpFlexWrap.dpRelatedLinks
+www.drikpanchang.com##.dpPageContentWrapper
+www.drikpanchang.com##.dpFlex.dpHeader
+www.drikpanchang.com###dp-panchangam-shuddhi-canvas
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpSunriseMoonriseCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpLunarDateCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpRashiNakshatraCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpAuspiciousCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpChandrabalamaCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpTamilYogaCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpInauspiciousCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpNivasaShoolaCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpCalendarEpochCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableHiddenCardBorder.dpPanchakaCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpDayEventCardWrapper > .dpTableCardTitle
+www.drikpanchang.com##.dpTableCell > .dpFlexWrap
+www.drikpanchang.com##.dpNoteText.dpContent
+
